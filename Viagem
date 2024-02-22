@@ -1,0 +1,29 @@
+from viagem_class import viagem_class
+
+viagem_0 = viagem_class("São Paulo")
+viagem_1 = viagem_class("Rio de Janeiro")
+viagem_2 = viagem_class("Santa Catarina")
+viagem_3 = viagem_class("Salvador")
+viagem_4 = viagem_class("Tocantins")
+
+print("Bem-vindo! Viagens GOL tem algumas ofertas para você!")
+viajante = input("Digite seu nome para começarmos: ")
+print(f"{viajante} temos 5 destinos que combinam com você:"
+'''
+[0] São Paulo
+[1] Rio de Janeiro
+[2] Santa Catarina
+[3] Salvador
+[4] Tocantins''')
+
+selecao = int(input("Selecione o número da viagem desejada: "))   
+lista_viagem = [viagem_0, viagem_1, viagem_2, viagem_3, viagem_4]   
+opcao_selecionada = int(selecao)
+for opcao in lista_viagem:
+    if opcao_selecionada >= 5:    #caso usuário não digite a opção correta
+        print("Esta opção não está incluída em nossos destinos.")
+        break
+    if opcao_selecionada <= 4:     #verifica a seleção
+        print(f"{viajante} sua viagem para {lista_viagem[opcao_selecionada].destino} está marcada.") #resultado
+        print("Volte sempre!")
+        break
