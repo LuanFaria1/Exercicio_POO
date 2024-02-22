@@ -20,10 +20,10 @@ selecao = int(input("Selecione o número da viagem desejada: "))
 lista_viagem = [viagem_0, viagem_1, viagem_2, viagem_3, viagem_4]   
 opcao_selecionada = int(selecao)
 for opcao in lista_viagem:
-    if opcao_selecionada >= 5:    #caso usuário não digite a opção correta
+    if opcao_selecionada >= 5:   
         print("Esta opção não está incluída em nossos destinos.")
         break
-    if opcao_selecionada <= 4:     #verifica a seleção
-        print(f"{viajante} sua viagem para {lista_viagem[opcao_selecionada].destino} está marcada.") #resultado
+    if opcao_selecionada <= 4:    
+        print(f"{viajante} sua viagem para {lista_viagem[opcao_selecionada].destino} está marcada.")
         print("Volte sempre!")
         break
